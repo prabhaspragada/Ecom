@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import './CSS/Shopcategory.css'
 import { ShopContext } from '../Context/ShopContext'
-import dropdown_icon from '../components/assets/dropdown_icon.png'
+import dropdown_icon from '../components/assets/dropdown-icon.jpg'
 import Item from '../components/Item/Item'
 
 const Shopcategory = (props) => {
