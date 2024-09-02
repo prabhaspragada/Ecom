@@ -15,7 +15,7 @@ const Product = () => {
       <Breadcum product={product}/>
       <ProductDisplay product={product} />
       <DescrptionBox/>
-      <RelatedProducts/>
+      <RelatedProducts id={product.id} category={product.category}/>
     </div>
   );
 };

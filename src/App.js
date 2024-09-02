@@ -1,7 +1,7 @@
 
 import './App.css';
 import Navbar  from './components/Navbar/Navbar';
-import{BrowserRouter,Routes,Route} from 'react-router-dom';
+import{BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Shop from './Pages/Shop';
 import  Shopcategory  from './Pages/Shopcategory';
 import Product  from './Pages/Product';
@@ -12,10 +12,15 @@ import men_banner from './components/assets/banner_mens.png'
 import women_banner from './components/assets/banner_women.png'
 import kid_banner from './components/assets/banner_kids.png'
 
+export const backend_url = 'http://localhost:4000';
+export const currency = '₹';
+
+
 function App() {
   return (
     <div >
-      <BrowserRouter>
+      <Router>
+      
      <Navbar/>
      <Routes>
       <Route path='/' element={<Shop/>}/>
@@ -30,7 +35,8 @@ function App() {
       <Route path='/login' element={<LoginSignup/>}/>
       </Routes>
       <Footer/>
-     </BrowserRouter>
+    
+     </Router>
     </div>
   );
 }

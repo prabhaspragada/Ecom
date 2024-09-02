@@ -3,6 +3,7 @@ import './ProductDisplay.css'
 import star_icon from "../assets/star_icon.png"
 import star_dull_icon from "../assets/star_dull_icon.png"
 import { ShopContext } from '../../Context/ShopContext'
+import { backend_url, currency } from "../../App";
 
 const ProductDisplay = (props) => {
     const {product}=props;
@@ -11,14 +12,14 @@ const ProductDisplay = (props) => {
     <div className='productdisplay'>
         <div className="productdisplay-left">
             <div className="productdisplay-img-list">
-                <img src={product.image} alt="" />
-                <img src={product.image} alt="" />
-                <img src={product.image} alt="" />
-                <img src={product.image} alt="" />
+                <img src={backend_url+product.image} alt="" />
+                <img src={backend_url+product.image} alt="" />
+                <img src={backend_url+product.image} alt="" />
+                <img src={backend_url+product.image} alt="" />
             </div>
 
             <div className="productdisplay-img">
-                <img className='productdisplay-main-img' src={product.image} alt="" />
+                <img className='productdisplay-main-img' src={backend_url+product.image} alt="" />
             </div>
         </div>
 
@@ -34,8 +35,8 @@ const ProductDisplay = (props) => {
                 </div>
 
                 <div className="product-display-right-prices">
-                <div className="product-display-right-prices-old">${product.old_price}</div>
-                    <div className="product-display-right-prices-new">${product.new_price}</div>
+                <div className="product-display-right-prices-old">{currency}{product.old_price}</div>
+                    <div className="product-display-right-prices-new">{currency}{product.new_price}</div>
                 </div>
                 <div className="productdisplay-right-description">
                     Good light weight shirt Oversized fit - Super Loose On Body Thoda Hawa Aane De
